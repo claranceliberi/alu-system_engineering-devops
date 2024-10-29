@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>404 - Page Not Found</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Open+Sans:wght@400;700&display=swap');
+
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'Open Sans', sans-serif;
+        background: #000000;
+        color: #ffffff;
+      }
+
+      .space-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 15% 25%,
+            #2d0052 0%,
+            transparent 30%
+          ),
+          radial-gradient(circle at 85% 75%, #000833 0%, transparent 30%),
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Cg fill='%23ffffff' fill-opacity='0.5'%3E%3Ccircle cx='2' cy='2' r='1'/%3E%3C/g%3E%3C/svg%3E");
+        animation: twinkle 10s infinite linear;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 7rem;
+        margin-bottom: 0;
+        color: #013794;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin-top: 0;
+        color: #013794;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        max-width: 600px;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      .home-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #013794;
+        color: #000000;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+
+      .home-link:hover {
+        background-color: #435f8f;
+        cursor: pointer;
+      }
+
+      .reasons-list {
+        text-align: left;
+        margin-bottom: 2rem;
+        font-size: 0.8rem;
+      }
+
+      .background-text {
+        position: absolute;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 6vw;
+        color: rgba(255, 255, 255, 0.089);
+        white-space: nowrap;
+        transform: rotate(-45deg);
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="space-background"></div>
+    <div class="container">
+      <div class="background-text">Ceci n'est pas une page</div>
+      <h1>404</h1>
+      <h2>Page Not Found</h2>
+      <p>The following problems could be the case:</p>
+      <ul class="reasons-list">
+        <li>The link is broken</li>
+        <li>This page never existed</li>
+        <li>This page has been removed</li>
+      </ul>
+      <a href="/" class="home-link">Go back to Liberi's home</a>
+    </div>
+  </body>
+</html>
