@@ -16,8 +16,8 @@ frontend liberi-frontend
         default_backend liberi-backend
 backend liberi-backend
         balance roundrobin
-        server 6203-web-01 3.91.97.86:80 check
-        server 6203-web-02 18.234.175.44:80 check
+        server 6203-web-01 54.85.8.164:80 check
+        server 6203-web-02 54.90.175.71:80 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
